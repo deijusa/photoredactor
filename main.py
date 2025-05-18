@@ -103,17 +103,17 @@ class ImageProccesor():
         self.savephoto()
         image_path = os.path.join(seach,self.dirphoto,self.filename)
         self.showImage(image_path)  
-    def mirror (self):
-        self.photo = self.photo.transpose(Image.FLIP_LEFT_RIGHT)
-        self.savephoto()
-        image_path = os.path.join(seach,self.dirphoto,self.filename)
-        self.showImage(image_path) 
     def rotateleft(self):
         self.photo = self.photo.transpose(Image.ROTATE_270)
         
         self.savephoto()
         image_path = os.path.join(seach,self.dirphoto,self.filename)
         self.showImage(image_path)
+    def mirror (self):
+        self.photo = self.photo.transpose(Image.FLIP_LEFT_RIGHT)
+        self.savephoto()
+        image_path = os.path.join(seach,self.dirphoto,self.filename)
+        self.showImage(image_path) 
     def rotateright(self):
         self.photo = self.photo.transpose(Image.ROTATE_90)
         self.savephoto()
